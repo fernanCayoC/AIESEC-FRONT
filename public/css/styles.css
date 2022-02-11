@@ -1,12 +1,12 @@
 /*==================== GOOGLE FONTS ====================*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
+
 :root {
     --header-height: 3rem;
-
     --hue-color: 232;
-
     --first-color: hsl(var(--hue-color), 69%, 61%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -19,10 +19,8 @@
     --container-color: #fff;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
-
     --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
@@ -30,11 +28,9 @@
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75 rem;
-
     /*========== Font weight ==========*/
     --font-medium: 500;
     --font-semi-bold: 600;
-
     /*========== Margenes Bottom ==========*/
     --mb-0-25: .25rem;
     --mb-0-5: .5rem;
@@ -44,7 +40,6 @@
     --mb-2: 2rem;
     --mb-2-5: 2.5rem;
     --mb-3: 3rem;
-
     /*========== z index ==========*/
     --z-tooltip: 10;
     --z-fixed: 100;
@@ -52,7 +47,7 @@
 }
 
 @media screen and (min-width: 968px) {
-    :root {
+     :root {
         --big-font-size: 3rem;
         --h1-font-size: 2.25rem;
         --h2-font-size: 1.5rem;
@@ -63,8 +58,10 @@
     }
 }
 
+
 /*========== Variables Dark ==========*/
-body.dark-theme{
+
+body.dark-theme {
     --first-color-second: hsl(var(--hue-color), 30%, 8%);
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
@@ -75,91 +72,104 @@ body.dark-theme{
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
 
+
 /*========== Dark/Light ==========*/
-.nav__btns{
-    display:flex;
+
+.nav__btns {
+    display: flex;
     align-items: center;
 }
 
-.change-theme{
+.change-theme {
     font-size: 1.25rem;
     color: var(--title-color);
     margin-right: var(--mb-1);
     cursor: pointer;
 }
-.change-theme:hover{
+
+.change-theme:hover {
     color: var(--first-color);
 }
 
+
 /*==================== BASE ====================*/
-*{
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     margin: 0 0 var(--header-height) 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
 }
-h1,h2,h3,h4{
+
+h1,
+h2,
+h3,
+h4 {
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
 
 
 /*==================== REUSABLES ====================*/
-.section{
+
+.section {
     padding: 2rem 0 4 rem;
 }
 
-.section_title{
+.section_title {
     font-size: var(--h1-font-size);
 }
 
-.section_subtitle{
+.section_subtitle {
     display: block;
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-3);
 }
 
 .section_title,
-.section_subtitle{
+.section_subtitle {
     text-align: center;
 }
+
+
 /*==================== LAYOUT ====================*/
-.container{
+
+.container {
     max-width: 768px;
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
 }
 
-.grid{
+.grid {
     display: grid;
     gap: 1.5rem;
 }
 
-.header{
+.header {
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -168,77 +178,83 @@ img{
     background-color: var(--body-color);
 }
 
+
 /*========== NAV ==========*/
-.nav{
+
+.nav {
     max-width: 1024px;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  @media screen and (max-width: 768px){
-    .nav__menu{
-      position: fixed;
-      top: -100%;
-      left: 0;
-      width: 100%;
-      padding: 1.5rem 0 1rem;
-      text-align: center;
-      background-color: var(--body-color);
-      transition: .4s;
-      box-shadow: 0 4px 4px rgba(0,0,0,.1);
-      border-radius: 0 0 1rem 1rem;
-      z-index: var(--z-fixed);
+}
+
+@media screen and (max-width: 768px) {
+    .nav__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        background-color: var(--body-color);
+        transition: .4s;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+        border-radius: 0 0 1rem 1rem;
+        z-index: var(--z-fixed);
     }
-  }
-  
-  .nav__item{
+}
+
+.nav__item {
     margin-bottom: var(--mb-2);
-  }
-  
-  .nav__link, .nav__toggle{
+}
+
+.nav__link,
+.nav__toggle {
     color: var(--text-color);
     font-weight: var(--font-medium);
-  }
+}
 
-  .nav__logo{
-      width: 25%;
+.nav__logo {
+    width: 25%;
+}
 
-  }
-  
-  .nav__logo:hover{
+.nav__logo:hover {
     color: var(--first-color);
-  }
-  
-  .nav__link{
+}
+
+.nav__link {
     transition: .3s;
-  }
-  
-  .nav__link:hover{
+}
+
+.nav__link:hover {
     color: var(--first-color);
-  }
-  
-  .nav__toggle{
+}
+
+.nav__toggle {
     font-size: 1.25rem;
     cursor: pointer;
-  }
-  
-  /* Mostrar menu */
-  .show-menu{
+}
+
+
+/* Mostrar menu */
+
+.show-menu {
     top: var(--header-height);
-  }
-  
-  /* Active menu */
-  .active-link{
+}
+
+
+/* Active menu */
+
+.active-link {
     color: var(--first-color);
-  }
-  
-  .scroll-header{
-    box-shadow: 0 2px 4px rgba(0,0,0,.1);
-  }
-  
-  .scrolltop{
+}
+
+.scroll-header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+
+.scrolltop {
     position: fixed;
     right: 1rem;
     bottom: -20%;
@@ -251,18 +267,18 @@ img{
     z-index: var(--z-tooltip);
     transition: .4s;
     visibility: hidden;
-  }
-  
-  .scrolltop:hover{
+}
+
+.scrolltop:hover {
     background-color: var(--first-color-alt);
-  }
-  
-  .scrolltop__icon{
+}
+
+.scrolltop__icon {
     font-size: 1.8rem;
     color: var(--body-color);
-  }
-  
-  .show-scroll{
+}
+
+.show-scroll {
     visibility: visible;
     bottom: 1.5rem;
-  }
+}
